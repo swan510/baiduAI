@@ -40,7 +40,7 @@ def recongize(audiofile,dev_pid=80001):
     elif results["err_msg"] == "success.":
         gc.collect()
         return results["result"][0]
-#百度文言一心识别对话
+#百度文心一言识别对话
 def ai_recongize(apikey,sercretkey,text):
     ai_token = fetch_token(apikey,sercretkey)
     url = f'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/eb-instant?access_token={ai_token}'
